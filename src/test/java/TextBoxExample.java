@@ -14,7 +14,9 @@ public class TextBoxExample {
 
     @BeforeMethod
     public void openLinkTestPage() throws InterruptedException {
-        driver = new ChromeDriver();
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.setBrowserVersion("129");
+        driver = new ChromeDriver(chromeOptions);
         driver.manage().window().maximize(); //open wechcha browser eka desktop size ekatama fit krla denna kiynne mehemai
         driver.get("https://www.leafground.com/input.xhtml");
         Thread.sleep(3000); // thappara ganak wait karanna onanm mehema dala krnna puluwan
